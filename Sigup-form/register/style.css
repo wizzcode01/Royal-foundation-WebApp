@@ -1,0 +1,83 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins";
+    width: 100vw;
+    height: auto;
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1rem;
+}
+.logo h1{
+    font-size: 2rem;
+    font-weight: 900;
+}
+.logo p{
+    font-size: 9px;
+    font-size: 1200;
+}
+.logo small{
+    font-size: 6px;
+}
+.hero{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  height: 85vh;
+
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 45%;
+    height: 70vh;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(67, 250, 60, 0.7);
+    border-radius: 15px;
+    gap: 1rem;
+    position: relative;
+}
+.container h1{
+    text-align: center;
+}
+.cards{
+   display: grid;
+   grid-template-columns: repeat(2, 1fr);
+   place-content: center;
+   padding: 1rem;
+   margin-top: 1rem;
+   gap: 3rem;
+}
+
+.btn{
+   position: absolute;
+   top: 87%;
+   left: 41%;
+}
+
+.btn button{
+    padding: 0.5rem 1rem;
+    background-color: green;
+    color: #fff;
+    border: none;
+}

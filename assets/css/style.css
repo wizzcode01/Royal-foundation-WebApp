@@ -1,0 +1,246 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    width: 100vw;
+    height: auto;
+    background-color: #eeeded;
+}
+header{
+    width: 100%;
+    min-height: 30px;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0 ,0.1);
+
+}
+
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 3rem;
+}
+.navBar img{
+    width: 75px;
+    height: 75px;
+}
+
+.help a{
+    color: rgb(19, 112, 19);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+section{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sign-up-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 8rem;
+
+}
+.sign-up-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #fff;
+    border-radius: 10px;
+    width: 90%;
+    height: 68vh;
+    margin-top: 3rem;
+}
+.sign-up-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.7rem;
+    margin-bottom: 2.5rem;
+}
+.input-field{
+    display: flex;
+    flex-direction: column;
+  
+   
+}
+.input-field input{
+    padding: 0.6rem;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid #c4bdbdd2;
+  
+}
+
+.input-btn input{
+    width: 100%;
+    padding: 0.8rem;
+    border-radius: 7px;
+    background-color: rgb(30, 138, 30);
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+}
+.input-btn input:hover{
+    background-color: rgb(28, 99, 28);
+}
+.reset{
+    position: absolute;
+    top: 84%;
+    left: 87%;
+    color: rgb(235, 69, 69);
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.hero > p {
+  margin-top: 0.6rem;
+  margin-left: 67%;
+}
+
+
+.side-bar-content{
+    height: 80vh;
+    width: 35%;
+    background: linear-gradient(to bottom, rgb(1, 206, 1), rgb(2, 77, 2) 80%);
+}
+@media screen and (min-width: 769px){
+    .reset{
+        position: absolute;
+        top: 84%;
+        left: 87%;
+        color: rgb(235, 69, 69);
+        font-size: 13px;
+        cursor: pointer;
+    }
+    
+    .hero > p {
+      margin-top: 0.6rem;
+      margin-left: 67%;
+    }
+}
+@media screen and (max-width: 768px){
+   
+   .reset{
+        position: absolute;
+        top: 81%;
+        left: 72%;
+        color: rgb(235, 69, 69);
+        font-size: 13px;
+        cursor: pointer;
+    } 
+    
+    .hero > p {
+      margin-top: 0.6rem;
+      margin-left: 32%;
+    }  
+    .side-bar-content{
+       display: none;
+    }
+    
+}
+@media screen and (max-width: 568px){
+    .reset{
+        position: absolute;
+        top: 74%;
+        left: 65%;
+        color: rgb(235, 69, 69);
+        font-size: 13px;
+        cursor: pointer;
+    } 
+    
+    .hero > p {
+      margin-top: 0.6rem;
+      margin-left: 28%;
+    }  
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .sign-up-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0; /* remove margin-left that breaks layout on small screens */
+        width: 100%;
+      }
+    
+      .sign-up-form {
+        width: 90%;
+        height: auto;
+        padding: 1.5rem;
+        margin-top: 2rem;
+        background-color: #fff;
+        border-radius: 10px;
+      }
+    
+      .side-bar-content {
+        width: 100%;
+        background: linear-gradient(to top, rgb(7, 184, 7), rgb(3, 102, 3));
+        color: #fff;
+        text-align: center;
+        padding: 1rem;
+        margin-top: 1rem;
+        border: none;
+        order: 2; /* push it to the bottom if inside a flex container */
+      }
+    
+}@media screen and (max-width: 480px){
+        section {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      
+        .sign-up-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          margin: 0; /* remove margin-left that breaks layout on small screens */
+          width: 100%;
+        }
+      
+        .sign-up-form {
+          width: 90%;
+          height: auto;
+          padding: 1.5rem;
+          margin-top: 2rem;
+          background-color: #fff;
+          border-radius: 10px;
+        }
+      
+        .side-bar-content {
+          width: 100%;
+          background-color: green;
+          color: #fff;
+          text-align: center;
+          padding: 1rem;
+          margin-top: 1rem;
+          border: none;
+          order: 2; /* push it to the bottom if inside a flex container */
+        }
+        .reset{
+            position: absolute;
+            top: 79%;
+            left: 64%;
+            color: rgb(235, 69, 69);
+            font-size: 13px;
+            cursor: pointer;
+        } 
+      }  

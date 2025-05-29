@@ -1,0 +1,109 @@
+body{
+    width: 100%;
+    height: auto;
+}
+.navbar{
+    background: #fff;
+    min-height: 7vh ;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-brand{
+    border: 2px solid green;
+    border-radius: 5px;
+}
+
+.navbar-nav{
+    flex: 1;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.nav-link{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.3rem;
+    position: relative;
+    
+}
+.nav-link::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 0;
+    height: 5px;
+    background-color: rgb(15, 88, 15);
+    border-radius: 50px;
+    transition: width 0.3s ease, left 0.3s ease; 
+  
+}
+.nav-link:hover::after{
+    width: 60%;
+    left: 15%;
+}
+.btn{
+    padding: 0.3rem 1rem;
+    margin: 1rem;
+}
+
+.nav-btn{
+    background-color: #fff;
+    color: green;
+    border: 1px solid green;
+}
+
+.custom-btn{
+    background-color: #fff;
+    color: green;
+    border: 1px solid green;
+}
+
+  .form-section{
+        display: none;
+        opacity: 0;
+        transform: translateX(50px);
+        transition: all 0.5s ease-in-out;
+        position: absolute;
+        width: 100%;
+    }
+    .form-section.active{
+        display: block;
+        opacity: 1;
+        transform: translateX(0);
+        position: relative;
+    }
+    .register-container .container {
+        margin-top: 7rem;
+    } 
+    .slide-in{
+        animation: slideInLeft 1s forwards;
+    }
+    @keyframes slideInLeft{
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to{
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+ @media (max-width: 768px){
+    body{
+       width: 100%;
+       overflow: hidden;
+    }
+    .navbar-nav{
+        margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    .nav-btn {
+        position: relative;
+        left: 25%;
+        margin-left: 0; /* Remove left margin */
+        text-align: center;
+    }
+}  

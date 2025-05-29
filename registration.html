@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration page</title>
+     <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Bootstrap Local CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/bootstrap-icons/css/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/registration.css">
+    
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body class="bg-light p-4" >
+    <nav class="navbar navbar-expand-md fixed-top p-4">
+        <div class="container-fluid">
+            <a href="#" class="navbar-brand"><img src="./assets/images/logo_img.jpg" alt="" width="50"></a>
+
+            <!-- TOGGLE BUTTON -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- NAVIGATION MENU -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="app.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./check-result.html">Check result</a>
+                    </li>
+                    <li class="nav-item">
+                      <a  class="nav-link" href="#">Classes</a>
+                   </li>
+                </ul>
+                <a href="login.html" class="btn btn-success nav-btn ">Login / Dashboard</a>
+                <!-- <a href="#" class="btn btn-success custom-btn ">Signup</a> -->
+            </div>
+        </div>
+    </nav>
+   <div class="container-fluid register-container bg-white p-4 rounded shadow pt-5 mt-5">
+      <div class="container" data-aos="fade-up" data-aos-duration="1000">
+            <h2 class="mb-4 text-center" style="color: rgb(2, 78, 2) ; font-size: 36px;">Student Registration </h2>
+
+        <form action="" id="registrationForm">
+            <!-- Step 1 -->
+            <div class="form-section active" id="step-1" >
+                <h4 class="mb-3 mt-5" style="color: green;">  Basic Information</h4>
+               <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="firstName" class="form-label">First Name</label>
+                        <input type="text" class="form-control" id="firstName" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="middleName" class="form-label">Middle Name</label>
+                        <input type="text" class="form-control" id="middleName" required>
+                    </div>
+                    <div class="col-md-4">
+                        <label for="lastName" class="form-label">last Name</label>
+                        <input type="text" class="form-control" id="lastName" required>
+                    </div>
+               </div>
+
+               <div class="row mb-3">
+                    <div class="col-md-4">
+                        <label for="" class="form-label">Gender</label>&nbsp;
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="gender" id="male" value="male" required>
+                            <label for="male" class="form-check-label">Male</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="gender" id="female" value="female">
+                            <label for="female" class="form-check-label">Female</label>
+                        </div>
+                    </div>
+               </div>
+
+               <div class="col-md-4">
+                  <label for="dob" class="form-label">Date of Birth</label>
+                  <input type="date" class="form-control" id="dob" required>
+               </div>
+               <div class="col-md-4 mt-2">
+                  <label for="placeOfBirth" class="form-label">Place of Birth</label>
+                  <input type="text" class="form-control" id="placeOfBirth" required>
+               </div>
+               
+               <div class="row mb-3 mt-2">
+                    <div class="col-md-4">
+                        <label for="nationality" class="form-label">Nationality</label>
+                        <select name="" id="nationality" class="form-select" required>
+                            <option value="" selected>select country</option>
+                        </select>
+                    </div>
+                    
+                    <div class="col-md-4">
+                        <label for="state" class="form-label">State of Origin</label>
+                        <select name="" id="state" class="form-select" required>
+                            <option value="">Select State</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label for="lga" class="form-label">LGA</label>
+                        <input type="text" class="form-control" id="lga" required>
+                    </div>
+               </div>
+
+               <div class="mb-3">
+                    <label for="religion" class="form-label">Religion</label>
+                    <select class="form-select" id="religion" required>
+                        <option value="">Select Religion</option>
+                        <option value="Christianity">Christianity</option>
+                        <option value="Islam">Islam</option>
+                        <option value="Others">Others</option>
+                    </select>
+               </div>
+
+               <div class="text-end">
+                  <button type="button" class="btn btn-success" onclick="nextStep()">Next</button>
+               </div>
+            </div>
+             
+            <!-- step 2  contact section-->
+            <div class="form-section" id="step-2" style="display: none;" >
+                <h4 class="mb-4"> contact Details</h4>
+                
+                <div class="mb-3">
+                    <label for="studentPhone" class="form-label">Student's Phone Number(if applicable)</label>
+                    <input type="tel" class="form-control" id="studentPhone" name="studentPhone" placeholder="e.g. 08029233832">
+                </div>
+
+                <div class="mb-3">
+                    <label for="studentEmail" class="form-label">Email Address</label>
+                    <input type="email" class="form-control" id="studentEmail"   name="studentEmail" placeholder="e.g. student@example.com">   
+                </div>
+
+                <div class="mb-3">
+                    <label for="studentAddress" class="form-label">Home Address</label>
+                    <textarea name="studentAddress" id="studentAddress" class="form-control" rows="3" placeholder="Enter full home address"></textarea>
+                </div>
+
+                <!-- Navigation buttons -->
+                <div class="d-flex justify-content-between mt-4">
+                      <button type="button" class="btn btn-success" onclick="prevStep()">Previous</button>
+                      <button type="button" class="btn btn-success" onclick="nextStep()">Next</button>
+                </div>
+                
+            </div>
+
+            <!-- step-3  -->
+            <div class="form-section" id="step-3">
+                <h4 class="mb-3"> Parent/Guardian Information</h4>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="guardianName" class="form-label">Parent/Guardian</label>
+                        <input type="text" class="form-control" id="guardianName" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="relaToStudent">Relationship to Student</label>
+                        <select name="" id="relaToStudent" class="form-select" required>
+                            <option value="">select option</option>
+                            <option value="Mother">Mother</option>
+                            <option value="Father">Father</option>
+                            <option value="Father/Mother">Father/Mother</option>
+                            <option value="Uncle">Uncle</option>
+                            <option value="Aunt">Aunt</option>
+                            <option value="Guardian">Guardian</option>
+                        </select>
+                    </div>
+                    
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label for="phoneNumber" class="form-label">phone number</label>
+                        <input type="tel" name="" id="phoneNumber" class="form-control" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label for="guardianEmail">Email Address</label>
+                        <input type="email" class="form-control" id="guardianEmail">
+                    </div>
+                </div>
+
+                <div class="row mb-3">
+                    <div class="col-md-6 mt-3">
+                        <label for="occupation">Occupation</label>
+                        <input type="text" class="form-control" id="occupation">
+                    </div>
+                    <div class="col-md-6">
+                        <label for="home/workAddress">Home/Work Address</label>
+                        <textarea name="home/workAddress" id="home/workAddress" class="form-control" rows="3" placeholder="32 chairman street Abuja, Nigeria"></textarea>
+                    </div>
+                </div>
+            
+                  <!-- Navigation buttons -->
+                <div class="d-flex justify-content-between mt-4">
+                      <button type="button" class="btn btn-success" onclick="prevStep()">Previous</button>
+                      <button type="button" class="btn btn-success" onclick="nextStep()">Next</button>
+                </div>
+                
+            </div>     
+            
+            <!-- step 4 -->
+            <div class="form-section" id="step-4">
+                <h4 class="mb-3">Step 4: Academic Information</h4>
+
+                <div class="mb-3">
+                    <label for="prevSchool" class="form-label">Previous School Attended</label>
+                    <input type="text" class="form-control" id="prevSchool" placeholder="Enter previous school name">
+                </div>
+
+                <div class="mb-3">
+                    <label for="lastClass" class="form-label">Last Class Attended</label>
+                    <input type="text" class="form-control" id="lastClass" placeholder="Enter last class attended">
+                </div>
+
+                <div class="mb-3">
+                    <label for="admissionClass" class="form-label">Applying for Admission into</label>
+                    <select class="form-select" id="admissionClass">
+                    <option value="">Select class</option>
+                    <option value="JSS1">JSS1</option>
+                    <option value="JSS2">JSS2</option>
+                    <option value="JSS3">JSS3</option>
+                    <option value="SS1">SS1</option>
+                    <option value="SS2">SS2</option>
+                    <option value="SS3">SS3</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="preferredArm" class="form-label">Preferred Arm/Section</label>
+                    <input type="text" class="form-control" id="preferredArm" placeholder="Enter preferred arm or section (optional)">
+                </div>
+
+                <div class="mb-3">
+                    <label for="academicSession" class="form-label">Academic Session</label>
+                    <select class="form-select" id="academicSession">
+                    <option value="">Select session</option>
+                    <option value="2024/2025">2024/2025</option>
+                    <option value="2025/2026">2025/2026</option>
+                    <option value="2026/2027">2026/2027</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="term" class="form-label">Term</label>
+                    <select class="form-select" id="term">
+                    <option value="">Select term</option>
+                    <option value="First Term">First Term</option>
+                    <option value="Second Term">Second Term</option>
+                    <option value="Third Term">Third Term</option>
+                    </select>
+                </div>
+
+                <hr class="my-4">
+
+                <h4 class="mb-3">Health Information</h4>
+
+                <div class="mb-3">
+                    <label for="bloodGroup" class="form-label">Blood Group</label>
+                    <select class="form-select" id="bloodGroup">
+                    <option value="">Select blood group</option>
+                    <option>A+</option>
+                    <option>A−</option>
+                    <option>B+</option>
+                    <option>B−</option>
+                    <option>AB+</option>
+                    <option>AB−</option>
+                    <option>O+</option>
+                    <option>O−</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="genotype" class="form-label">Genotype</label>
+                    <select class="form-select" id="genotype">
+                    <option value="">Select genotype</option>
+                    <option>AA</option>
+                    <option>AS</option>
+                    <option>SS</option>
+                    <option>AC</option>
+                    <option>SC</option>
+                    </select>
+                </div>
+
+                <div class="mb-3">
+                    <label for="healthChallenges" class="form-label">Any Health Challenges?</label>
+                    <textarea class="form-control" id="healthChallenges" rows="3" placeholder="Describe any health issues (optional)"></textarea>
+                </div>
+
+                <div class="d-flex justify-content-between">
+                    <button type="button" class="btn btn-secondary" onclick="prevStep()">Previous</button>
+                    <button type="button" class="btn btn-primary" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+            
+            <!-- step 5 -->
+            <div class="form-section" id="step-5">
+                <h4 class="mb-4">Step 5: Login Account & Submission</h4>
+
+                <!-- Login Account Creation -->
+                <div class="mb-3">
+                    <label for="username" class="form-label">Create Username</label>
+                    <input type="text" class="form-control" id="username" placeholder="Enter username">
+                </div>
+
+                <div class="mb-3">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" class="form-control" id="password" placeholder="Enter password">
+                </div>
+
+                <div class="mb-3">
+                    <label for="confirmPassword" class="form-label">Confirm Password</label>
+                    <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password">
+                </div>
+
+                <!-- Agreement Checkbox -->
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="agreeTerms">
+                    <label class="form-check-label" for="agreeTerms">
+                    I confirm that the information provided is correct
+                    </label>
+                </div>
+
+                <!-- Submit Button -->
+                <button type="button" class="btn btn-success" onclick="submitForm()">Submit Registration</button>
+                <button type="button" class="btn btn-secondary" onclick="prevStep()">Previous</button>
+            </div>
+        </form>      
+    </div>
+         <!-- Registration Success Modal -->
+                    <div class="modal fade" id="successModal" tabindex="-1" aria-labelledby="successModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="successModalLabel">Registration Successful</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            Registration successful! Please wait for admin approval and notification.
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal">OK</button>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+  </div>
+       
+    
+    <script>
+        // to load json file
+        const nationalitySelect = document.getElementById("nationality");
+        const stateSelect = document.getElementById("state");
+        let countryData = [];
+
+        // load the data 
+        fetch("countries.json")
+            .then(response => response.json())
+            .then(data => {
+                countryData = data;
+                populateCountries();
+            })
+            .catch(error => {
+                console.error("Error loading country data:", error);
+            });
+          //add or populate countries into nationality 
+          function populateCountries(){
+            const countries = Object.keys(countryData);
+            countries.forEach(country => {
+                const option = document.createElement("option");
+                option.value = country;
+                option.textContent = country;
+                nationalitySelect.appendChild(option);
+            });
+          }
+
+          //check country and load or update states
+          nationalitySelect.addEventListener("change", function () {
+            const selectedCountry = this.value;
+            const states = countryData[selectedCountry] || [];
+            
+            //clears the existing option in the dropdown
+            stateSelect.innerHTML = '<option value="">select state</option>';
+            
+            //Add new options
+            states.forEach(state => {
+                const option = document.createElement("option");
+                option.value = state;
+                option.textContent = state;
+                stateSelect.appendChild(option);
+            })
+          })
+    </script>
+    <script>
+
+        let currentStep = 1
+        
+        function showStep(step){
+            document.querySelectorAll('.form-section').forEach((section) =>{
+                section.classList.remove('active', 'slide-in')
+                section.style.display = 'none';
+            })
+           const activeSection =  document.getElementById(`step-${step}`)
+           if(activeSection){
+            activeSection.classList.add('active', 'slide-in')
+            activeSection.style.display = 'block';
+           }
+        }
+
+        function nextStep(){
+            // step 1 validation
+            if(currentStep === 1){
+                  const firstName = document.getElementById("firstName").value.trim();
+                    const lastName = document.getElementById("lastName").value.trim();
+                    const gender = document.querySelector('input[name="gender"]:checked');
+                    const dob = document.getElementById("dob").value;
+
+                     if (!firstName || !lastName || !gender || !dob) {
+                            alert("Please fill all required fields in Step 1.");
+                            return;
+                }
+            }
+            
+             if (currentStep === 2) {
+                    const phone = document.getElementById("studentPhone").value.trim();
+                    const email = document.getElementById("studentEmail").value.trim();
+                    const address = document.getElementById("studentAddress").value.trim();
+
+                    if (!phone || !email || !address) {
+                        alert("Please fill all required fields in Step 2.");
+                        return;
+                }
+            }
+
+            if (currentStep === 3){
+                const guardianName = document.getElementById("guardianName").value.trim();
+                const relationship = document.getElementById("relaToStudent").value.trim();
+                const phoneNumber = document.getElementById("phoneNumber").value.trim();
+                const guardianEmail = document.getElementById("guardianEmail").value.trim()
+                const occupation = document.getElementById("occupation").value.trim();
+                const address = document.getElementById("home/workAddress").value.trim();
+                if(!guardianName || !relationship || !phoneNumber || !guardianEmail || !occupation || !address){
+                    alert("please fill all required fields in step 3.")
+                    return; 
+                }
+
+            }
+
+            if(currentStep === 4){
+                const prevSchool =    document.getElementById("prevSchool").value.trim(); 
+                const lastClass =     document.getElementById("lastClass").value.trim(); 
+                const admissionClass = document.getElementById("admissionClass").value.trim(); 
+                const academicSession  =  document.getElementById("academicSession").value.trim(); 
+                const term =     document.getElementById("term").value.trim(); 
+                const bloodGroup =     document.getElementById("bloodGroup").value.trim(); 
+                const genotype =     document.getElementById("genotype").value.trim();
+                if(!prevSchool || !lastClass || !admissionClass || !academicSession || !term || !bloodGroup || !genotype){
+                alert("please fill all required fields in step 4.")
+                return;  
+                } 
+                
+            }
+        
+
+            if (currentStep === 5){
+                    const username = document.getElementById("username").value.trim();
+                    const password = document.getElementById("password").value.trim();
+                    const confirmPassword = document.getElementById("confirmPassword").value.trim();
+                    const agree = document.getElementById("agreeTerms").checked;
+
+                    if(username === "" || password === "" || confirmPassword === ""){
+                        alert("Please complete all login fields.")
+                        return;
+                    }
+
+                    if(password !== confirmPassword){
+                        alert("passwords do not match.")
+                        return;
+                    }
+
+                    if(!agree){
+                        alert("You have to agree to the terms and conditions to proceed.")
+                        return;
+                    }
+                
+            } 
+            
+            if(currentStep < 5){
+                currentStep++;
+                showStep(currentStep);
+            }    
+     }
+      
+        function prevStep(){
+            if(currentStep > 1){
+                currentStep--;
+                showStep(currentStep);
+            }
+           
+        }
+        function submitForm(){
+            var successModal= new bootstrap.Modal(document.getElementById('successModal'));
+                successModal.show();
+                return  
+        }
+          document.addEventListener("DOMContentLoaded", () => {
+            showStep(currentStep)
+        })
+     
+    </script>
+      <script>
+        AOS.init({
+          duration: 1000, 
+          easing: 'ease-in-out', 
+        });
+      </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+     <script src="assets/bootstrap/bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
+     <script src="https://js.paystack.co/v1/inline.js"></script>
+</body>
+</html>

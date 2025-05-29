@@ -1,0 +1,52 @@
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* Sidebar Styling */
+.bg-dark {
+    background-color: #343a40 !important;
+}
+
+.nav-link {
+    font-size: 1rem;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.nav-link:hover {
+    background-color: #107220;
+    text-decoration: none;
+}
+
+/* Card Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+}
+.card:hover{
+    background-color: rgb(230, 226, 226);
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.nav-link.text-danger:hover {
+    color: white !important;
+    background-color: #dc3545; /* Bootstrap danger color */
+}
+.small-form{
+    width: 500px;
+    margin: 0 auto;
+}
+@media (max-width: 768px) {
+    .small-form {
+        width: 100% !important;
+        max-width: 300px;
+    }
+    .header {
+        flex-direction: row !important;
+        gap: 1rem;
+    }
+    .container-fluid.p-4 {
+        padding: 1rem !important;
+    }
+}
