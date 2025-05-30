@@ -6,7 +6,11 @@
 
 body{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+<<<<<<< HEAD
     overflow-x: hidden;
+=======
+    width: 100vw;
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
 }
 .navbar{
     background: #fff;
@@ -23,8 +27,11 @@ body{
     flex: 1;
     justify-content: center;
     gap: 2rem;
+<<<<<<< HEAD
     width: 100%;
     box-sizing: border-box;
+=======
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
 }
 
 .nav-link{
@@ -63,6 +70,10 @@ body{
 .hero{
    position: relative;
    padding: 6rem;
+<<<<<<< HEAD
+=======
+   width: 100vw;
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
    display: flex;
    flex-direction: row;
    gap: 0.6rem;
@@ -113,8 +124,12 @@ body{
    line-height: 1.4;  
 }
 .custom-img{
+<<<<<<< HEAD
     width: 100%;
     height: auto;
+=======
+    width: 130%;
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
 }
 
 .custom-card{
@@ -211,6 +226,7 @@ margin-top: 3rem;
     font-weight: bold;
   }
   
+<<<<<<< HEAD
 @media (min-width: 320px) and (max-width: 767px){
     body, html{
        width: 100%;
@@ -221,11 +237,23 @@ margin-top: 3rem;
         min-height: 56px;
         padding: 0.5rem 1rem !important;
     }
+=======
+  
+@media (max-width: 768px){
+    html, body {
+       margin: 0;
+       padding: 0;
+       overflow-x: hidden; /* horizontal scroll hidden */
+       overflow-y: auto;   /* allow vertical scroll */
+       height: 100%;
+   }
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
     .navbar-nav{
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+<<<<<<< HEAD
         gap: 0.5rem;
         width: 100%;
         box-sizing: border-box;
@@ -252,11 +280,29 @@ margin-top: 3rem;
     .hero{
         margin-top: 10rem;
         padding: 1rem 0.5rem;
+=======
+        gap: 1rem;
+    }
+    .nav-btn {
+        position: relative;
+        left: 25%;
+        margin-left: 0; /* Remove left margin */
+        text-align: center;
+    }
+    .hero{
+        margin-top: 10rem;
+        padding: 0rem 0rem;
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
         width: 100%;
     }
     .custom-hero{
         padding: 0 0;
+<<<<<<< HEAD
         margin-left: 5%;         
+=======
+        margin-left: 5%;
+         
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
     }
     .hero-row{
         display: flex;
@@ -284,8 +330,13 @@ margin-top: 3rem;
       .hero-link{
        font-size: 14px !important;
        padding: 8px 20px !important;
+<<<<<<< HEAD
        display: block;
        margin: 1rem auto !important;
+=======
+       margin: 0 auto !important;
+       margin-left: 35% !important;
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
     }
      .hero-img{
         margin-bottom: 1rem;
@@ -301,12 +352,17 @@ margin-top: 3rem;
     background-color: rgb(248, 248, 248);
    }
    .custom-container .container{
+<<<<<<< HEAD
     margin-top: 2rem;
    }
     .custom-img {
         width: 100% !important;
         height: auto;
     }
+=======
+    margin-top: 5rem;
+   }
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
    .custom-container header{
     margin: 0 auto;
 }
@@ -332,4 +388,8 @@ margin-top: 3rem;
     font-size: 16px;
    
  } 
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4

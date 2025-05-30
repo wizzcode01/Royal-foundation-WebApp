@@ -4,7 +4,7 @@ body{
 }
 .navbar{
     background: #fff;
-    min-height: 7vh ;
+    min-height: 5vh ;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -73,7 +73,11 @@ body{
         position: relative;
     }
     .register-container .container {
+<<<<<<< HEAD
         margin-top: 1rem;
+=======
+        margin-top: 3rem;
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
     } 
     .slide-in{
         animation: slideInLeft 1s forwards;
@@ -93,10 +97,14 @@ body{
        width: 100%;
        overflow-x: hidden;
        overflow-y: auto;
+<<<<<<< HEAD
     }
     .navbar{
         min-height: 57px;
         padding: 0.5rem 1rem !important;
+=======
+       height:100%;
+>>>>>>> 8e3619c9a615eb11d896608344a01861cbde12a4
     }
     .navbar-nav{
         margin-top: 2rem;
