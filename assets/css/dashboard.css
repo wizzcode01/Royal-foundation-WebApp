@@ -49,4 +49,7 @@ body{
     .container-fluid.p-4 {
         padding: 1rem !important;
     }
+    .dashboard-welcome-small{
+        font-size: 16px;
+    }
 }

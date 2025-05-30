@@ -98,17 +98,36 @@
        width: 100%;
        overflow: hidden;
     }
+    .navbar{
+        min-height: 56px;
+        padding: 0.5rem 1rem !important;
+    }
     .navbar-nav{
         margin-top: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 1rem;
+        gap: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
     }
-    .nav-btn {
-        position: relative;
-        left: 25%;
-        margin-left: 0; /* Remove left margin */
+        .nav-btn {
+       left: 0;
+       margin: 0.5rem auto;
+       display: block;
+       float: none;
+       width: 100%;
+       text-align: center;
+    }
+    .nav-item, .nav-link{
+         max-width: 100%;
+        box-sizing: border-box;
         text-align: center;
+        white-space: normal;
+    }
+     .navbar-collapse {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden;
     }
 }  
