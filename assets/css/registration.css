@@ -4,7 +4,7 @@ body{
 }
 .navbar{
     background: #fff;
-    min-height: 7vh ;
+    min-height: 5vh ;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
 }
 
@@ -73,7 +73,7 @@ body{
         position: relative;
     }
     .register-container .container {
-        margin-top: 7rem;
+        margin-top: 3rem;
     } 
     .slide-in{
         animation: slideInLeft 1s forwards;
@@ -91,7 +91,9 @@ body{
  @media (max-width: 768px){
     body{
        width: 100%;
-       overflow: hidden;
+       overflow-x: hidden;
+       overflow-y: auto;
+       height:100%;
     }
     .navbar-nav{
         margin-top: 2rem;
