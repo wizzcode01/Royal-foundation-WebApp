@@ -5,7 +5,7 @@
 }
 
 body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     font-family: "Poppins", sans-serif;
     overflow-x: hidden;
 }
 .navbar{
@@ -56,8 +56,8 @@ body{
 
 .nav-btn{
     background-color: #fff;
-    color: green;
-    border: 1px solid green;
+    color: rgb(1, 163, 1);
+    border: 1px solid rgb(1, 163, 1);
 }
 
 .hero{
@@ -66,14 +66,19 @@ body{
    display: flex;
    flex-direction: row;
    gap: 0.6rem;
+   min-height: 100px;
+   height: 100vh;
 
 }
-
+.hero-content{
+    margin-top: 2rem;
+  margin-left: 1.5rem;
+}
 .hero h1{
     margin-top: 10rem;
     font-size: 2.5rem;
     color: #fff;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 2px;
 }
 .hero p{
@@ -84,35 +89,45 @@ body{
     display: block;
     width: 40%;
     height: 20%;
+    margin-left: 3rem;
 }
 
 .custom-row{
     margin-top: 3rem;
     display: flex;
     justify-content: space-around;
-    gap: 2rem;
+    
  }
-
+.custom-container .container{
+    margin-top: 5rem;
+}
 .custom-container header{
-    margin-left: 6.5rem;
+    margin-left: 3rem;
 }
 .custom-container header span{
     font-size: 2rem;
     font-weight: 500;
     margin-bottom: 20px;
-    color: rgb(78, 70, 70); 
+    color: rgb(2, 73, 29); 
 }
 .custom-container header h1{
     font-size: 3rem;
-    color: rgb(58, 80, 58);
+    color: rgb(6, 145, 6);
     text-transform: capitalize;
+}
+.custom-col{
+    margin-right: 5rem;
 }
 .custom-col p {
    font-size: 1.2rem;
    word-spacing: 4px;
    line-height: 1.4;  
 }
+.row-image{
+    width: 50%;
+}
 .custom-img{
+    display: block;
     width: 100%;
     height: auto;
 }
@@ -249,28 +264,36 @@ margin-top: 3rem;
         overflow-x: hidden;
     }
     .hero{
-        margin-top: 10rem;
-        padding: 1rem 0.5rem;
-        width: 100%;
+        margin-top: 12rem;
+        padding: 1rem 1rem;
+        max-width: 100% !important;
         gap: 1rem;
+        height: 100vh;
     }
     .custom-hero{
-        padding: 0;
-        margin-left: 0;     
-        margin-right: 0;    
-    }
-    .hero-row{
         display: flex;
         flex-direction: column;
-        justify-content:center;
+        justify-content: center;
         align-items: center;
-        width: 100%;
+        max-width: 100% !important;
     }
-    .hero-content{
+     .hero-img{
+        margin: 0 auto 1rem auto !important;
         width: 100%;
-        margin: 0;
-        padding: 0;
-        margin-right: 0.3rem;
+        text-align: center;
+        margin-left: 0;
+    }
+    .hero-img img{
+        margin: 0 auto !important;
+        width: 100% !important;
+        max-width: 320px;
+        display: block;
+
+   }
+     .hero-content{
+      margin-top: 7rem;
+       text-align: center;
+       margin-left: 0;
     }
      .hero-content h1{
         margin-top: 2rem;
@@ -284,26 +307,19 @@ margin-top: 3rem;
       }
       .hero-link{
        font-size: 14px !important;
-       padding: 8px 20px !important;
        display: block;
        margin: 1rem auto !important;
+       text-align: center;
     }
-     .hero-img{
-        margin-bottom: 1rem;
-        margin: auto !important;
-        width: 100%;
-        text-align: center;
-    }
-    .hero-img img{
-        margin: 0 auto !important;
-        width: 100% !important;    
-   }
    .custom-container{
     background-color: rgb(248, 248, 248);
    }
    .custom-container .container{
-    margin-top: 2rem;
+    margin-bottom: 2rem;
    }
+   .row-image{
+    width: 100%;
+}
     .custom-img {
         width: 100% !important;
         height: auto;
@@ -323,6 +339,10 @@ margin-top: 3rem;
     text-align: center;
     color: rgb(58, 80, 58);
     text-transform: capitalize;
+}
+.custom-col p{
+    margin-top: 1rem;
+    font-size: 16px;
 }
 .check-result-btn {
     width: 100%;
